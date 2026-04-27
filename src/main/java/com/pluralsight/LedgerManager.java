@@ -56,6 +56,9 @@ public class LedgerManager {
         else {
             System.out.println("Transaction cancelled. Returning to menu.");
         }
+        // after confirmed OR canceled
+        System.out.println("\nPress Enter to return to home...");
+        scanner.nextLine();
 
     } //end of addDeposit method
 
@@ -114,7 +117,22 @@ public class LedgerManager {
         else {
             System.out.println("Payment cancelled. Returning to menu.");
         }
-
-
+        // after confirmed OR cancelled
+        System.out.println("\nPress Enter to return to home...");
+        scanner.nextLine();
     }
+
+    // Make method for exit
+    public static boolean confirmExit(Scanner scanner) {
+        // ask question
+        System.out.println("Are you sure you want to exit?");
+        String answer = scanner.nextLine();
+        if (answer.equalsIgnoreCase("Y")){
+            System.out.println("Now exiting store..");
+            return true;
+        } else
+            System.out.println("\nPress Enter to return to home...");
+        return false;
+    }
+
 }//end of class

@@ -55,7 +55,7 @@ public class HomeScreen {
                     break;
 
                 case "X":
-                    System.out.println("Exiting application");
+                 LedgerManager.confirmExit(scanner);
                     System.out.println("Thank you for magically transacting!");
                     running = false; // stops the loop
                     break;
@@ -65,7 +65,7 @@ public class HomeScreen {
             }
 
         }
-
+//remember to close scanner at the end
         scanner.close();
 
     }//end of main
