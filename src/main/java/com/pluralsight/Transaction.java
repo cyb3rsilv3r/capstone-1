@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Transactions {
+public class Transaction {
     //add variables without initializing them for user input
     String date;
     String time;
@@ -9,7 +9,7 @@ public class Transactions {
     double amount;
     //create constructor for new transaction
 
-    public Transactions(String date, String time, String description, String vendor, double amount) {
+    public Transaction(String date, String time, String description, String vendor, double amount) {
         this.date = date;
         this.time = time;
         this.description = description;

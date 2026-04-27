@@ -2,38 +2,70 @@ package com.pluralsight;
 //With this application you can track all financial transactions for a
 //business or for personal use
 
-//import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class HomeScreen {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+
 //tasks:
 //• Home Screen
 // Add Scanner
         Scanner scanner = new Scanner(System.in);
-       // FileWriter writer = new FileWriter("transactions.csv");
 
-// The home screen should give the user the following options.
-//▪ D) Add Deposit - prompt user for the deposit information and save it
-//        to the csv file
-        System.out.println("{ D } Add Deposit");
-        //need a method to take info, write it to a file and then display confirmation and ask what to do next
-        // create a
-//▪ P) Make Payment (Debit) - prompt user for the debit information
-//        and save it to the csv file
-        System.out.println("{ P } Make Payment");
+        boolean running = true; // controls if app keeps running
 
-//▪ L) Ledger - display the ledger screen
-        System.out.println("{ L } Ledger");
-
-//▪ X) Exit - exit the application
-        System.out.println("{ X } Exit ");
 //     The application should continue to run until the user chooses to exit.
 //need a loop here
+        while (running) {
 
+// The home screen should give the user the following options.
 
+//▪ D) Add Deposit
+            System.out.println("{ D } Add Deposit");
 
+//▪ P) Make Payment (Debit)
+            System.out.println("{ P } Make Payment");
+
+//▪ L) Ledger
+            System.out.println("{ L } Ledger");
+
+//▪ X) Exit
+            System.out.println("{ X } Exit ");
+
+// get user input
+            String choice = scanner.nextLine();
+
+// decide what to do
+            switch (choice.toUpperCase()) {
+
+                case "D":
+                    LedgerManager.addDeposit(scanner);
+                    System.out.println("Add Deposit selected");
+                    //insert deposit screen art here
+                    break;
+
+                case "P":
+                    System.out.println("Make Payment selected");
+
+                    break;
+
+                case "L":
+                    System.out.println("Ledger selected");
+                    break;
+
+                case "X":
+                    System.out.println("Exiting application");
+                    System.out.println("Thank you for magically transacting!");
+                    running = false; // stops the loop
+                    break;
+
+                default:
+                    System.out.println("Invalid option");
+            }
+
+        }
+
+        scanner.close();
 
     }//end of main
 
