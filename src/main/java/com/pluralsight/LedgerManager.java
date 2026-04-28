@@ -1,20 +1,23 @@
 package com.pluralsight;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class LedgerManager {
 
-    public static void addDeposit(Scanner scanner) {
+    public static void addDeposit(Scanner scanner) throws IOException {
 
         // 1. collect information
 
+        //use local date and time for automatic input
         // date
-        System.out.println("Enter date [yyyy-mm-dd] :");
-        String date = scanner.nextLine();
+        String date = LocalDate.now().toString();
 
         // time
-        System.out.println("Enter time [hh:mm:ss] :");
-        String time = scanner.nextLine();
+        String time = LocalTime.now().toString();
 
         // ask description
         System.out.println("Enter description:");
@@ -39,7 +42,7 @@ public class LedgerManager {
         System.out.println("does this look correct? Y/N");
         String confirm = scanner.nextLine();
 
-        // 3. if yes
+        // 3. add if for confirmation
         if (confirm.equalsIgnoreCase("Y")) {
 
             // create transaction
@@ -49,32 +52,31 @@ public class LedgerManager {
             System.out.println("Deposit confirmed!");
 
             // write transaction to csv (we add this next)
-
+            writeTransaction(t);
         }
 
-        // 4. if no
+        //  if no
         else {
             System.out.println("Transaction cancelled. Returning to menu.");
         }
         // after confirmed OR canceled
         System.out.println("\nPress Enter to return to home...");
         scanner.nextLine();
-
     } //end of addDeposit method
 
     // Create method for making payments
-    public static void makePayment(Scanner scanner) {
+    public static void makePayment(Scanner scanner) throws IOException {
         //collect info on payments (same format as deposit but negative)
 
-        // 1. collect information
+        // 1. collect information again
 
+        //use local date and time here and make them into strings
         // date
-        System.out.println("Enter date [yyyy-mm-dd] :");
-        String date = scanner.nextLine();
+        String date = LocalDate.now().toString();
 
         // time
-        System.out.println("Enter time [hh:mm:ss] :");
-        String time = scanner.nextLine();
+        //use withNano for accurate time
+        String time = LocalTime.now().withNano(0).toString();
 
         // ask description
         System.out.println("Enter description:");
@@ -109,7 +111,8 @@ public class LedgerManager {
             // print confirmation
             System.out.println("Payment confirmed!");
 
-            // write transaction to csv (we add this next)
+            // write transaction to csv
+            writeTransaction(t);
 
         }
 
@@ -117,22 +120,40 @@ public class LedgerManager {
         else {
             System.out.println("Payment cancelled. Returning to menu.");
         }
-        // after confirmed OR cancelled
+        // after confirmed OR canceled
         System.out.println("\nPress Enter to return to home...");
         scanner.nextLine();
     }
 
+
+    public static void writeTransaction(Transaction t) throws IOException {
+        //add file writer
+
+        //create method inside try/catch to write to csv file
+        FileWriter writer = new FileWriter("transactions.csv", true);
+
+        //add variable to store line
+        String line = t.getDate() + "|" +
+                t.getTime() + "|" +
+                t.getDescription() + "|" +
+                t.getVendor() + "|" +
+                t.getAmount() + "\n";
+        // have writer put the line together and close after
+        writer.write(line);
+        writer.close();
+
+    }//END OF WRITE TRANSACTION
+
     // Make method for exit
-    public static boolean confirmExit(Scanner scanner) {
-        // ask question
-        System.out.println("Are you sure you want to exit?");
+    public static void confirmExit(Scanner scanner) {
+        // ask for confirmation of exit
+        System.out.println("Are you sure you want to exit? Y/N");
         String answer = scanner.nextLine();
-        if (answer.equalsIgnoreCase("Y")){
+
+        //create boolean if statement to assist exit
+        if (answer.equalsIgnoreCase("Y")) {
             System.out.println("Now exiting store..");
-            return true;
         } else
             System.out.println("\nPress Enter to return to home...");
-        return false;
     }
-
 }//end of class

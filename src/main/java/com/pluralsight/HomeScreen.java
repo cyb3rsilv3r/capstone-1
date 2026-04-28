@@ -2,10 +2,11 @@ package com.pluralsight;
 //With this application you can track all financial transactions for a
 //business or for personal use
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HomeScreen {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 //tasks:
 //• Home Screen

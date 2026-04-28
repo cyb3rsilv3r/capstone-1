@@ -58,4 +58,7 @@ public class Transaction {
         this.amount = amount;
     }//END OF G&S
 
-}//END OF TRANSACTIONS
+
+
+
+}//END OF TRANSACTIONS CLASS
