@@ -7,26 +7,30 @@ import java.util.Scanner;
 public class LedgerManager {
 
     public static void addDeposit(Scanner scanner) throws IOException {
-
+        System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
+        System.out.println("    /)/)           (\\(\\");
+        System.out.println("   ( . .)          (ᵔ ᵔ ) ✧ recording a new blessing to coffers ✧");
+        System.out.println("   o( づ ˚₊‧꒰ა $ ໒꒱ ‧₊˚⊂  )o");
+        System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──\n");
         // 1. collect information
 
         // date
-        System.out.println("Enter Date");
+        System.out.println("˚₊‧꒰ა when was blessing given? ໒꒱ ‧₊˚ :(YYYY/MM/DD)");
         String date = scanner.nextLine();
 
         // time
-        System.out.println("Enter Time");
+        System.out.println("˚₊‧꒰ა enter time of receipt ໒꒱ ‧₊˚");
         String time = scanner.nextLine();
         // ask description
-        System.out.println("Enter description:");
+        System.out.print("˚₊‧꒰ა please describe this blessing ໒꒱ ‧₊˚  ");
         String description = scanner.nextLine();
 
         // ask vendor
-        System.out.println("Enter Vendor:");
+        System.out.println("˚₊‧꒰ა identify merchant ໒꒱ ‧₊˚ ");
         String vendor = scanner.nextLine();
 
         // ask amount
-        System.out.println("Enter amount:");
+        System.out.println("˚₊‧꒰ა enter coin amount");
         double amount = scanner.nextDouble();
 
         //remember to add buffer after double
@@ -47,7 +51,7 @@ public class LedgerManager {
             Transaction t = new Transaction(date, time, description, vendor, amount);
 
             // print confirmation
-            System.out.println("Deposit confirmed!");
+            System.out.println(amount+ " coins added to coffer!$ˎˊ˗");
 
             // write transaction to csv (we add this next)
             writeTransaction(t);

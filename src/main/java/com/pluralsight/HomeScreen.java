@@ -22,29 +22,28 @@ public class HomeScreen {
 //need a loop here
         while (running) {
 
-            System.out.println("""
-  °❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･
+            System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+            System.out.println("                 welcome to ");
+            System.out.println("      ཐི⋆♱⋆ཋྀ       𝓢𝓲𝓵𝓿𝓮𝓻'𝓼     ཐི⋆♱⋆ཋྀ ˚");
+            System.out.println(" .       ˖𓍢❀.ೃ (definitely legal) ˖𓍢❀.ೃ࿔   ");
+            System.out.println("⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺  𝔸𝕡𝕠𝕥𝕙𝕖𝕔𝕒𝕣𝕪 𝕠𝕗 𝕆𝕕𝕕𝕚𝕥𝕚𝕖𝕤  ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺");
 
-      ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺    𝕾𝖎𝖑𝖛𝖊𝖗'𝖘    ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺
-            ˖𓍢❀.ೃ  (🇩‌🇪‌🇫‌🇮‌🇳‌🇮‌🇹‌🇪‌🇱‌🇾‌ 🇱‌🇪‌🇬‌🇦‌🇱‌) ˖𓍢❀.ೃ࿔
-   ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺  𝔸𝕡𝕠𝕥𝕙𝕖𝕔𝕒𝕣𝕪 𝕠𝕗 𝕆𝕕𝕕𝕚𝕥𝕚𝕖𝕤  ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺
-
-   °❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･
-""");
+            System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+            System.out.println("── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
+            System.out.println("⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹ Main Menu ⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹");
 // The home screen should give the user the following options.
 
-//▪ D) Add Deposit
-            System.out.println("⋆˙⟡ —{ D } Add Coins to Coffer⋆˙⟡ —");
+//D) Add Deposit - Add coins to coffer
+//P) Make Payment (Debit)- Empty coffer
+            //L) Ledger- Grimoire
+            System.out.println("꒰ა ☆ ໒꒱ D } Add Coins to Coffer ☾");
 
-//▪ P) Make Payment (Debit)
-            System.out.println("{ P } Make Payment");
-
-//▪ L) Ledger
-            System.out.println("{ L } Ledger");
-
-//▪ X) Exit
-            System.out.println("{ X } Exit");
-
+            System.out.println("꒰ა ☆ ໒꒱{ P } Empty Coffers ₊˚.⋆✩₊˚.⋆   ");
+            System.out.println("‧꒰ა ☆ ໒꒱{ L } Open Coin Grimoire ⋆˚.⋆   ✩  ╱|、 ");
+            System.out.println("꒰ა ☆ ໒꒱{ X } Escape Apothecary  ₊˚.⋆  ✩  (˚ˎ 。7  ");
+            System.out.println("  ─────────────۶ৎ─────────────            |、˜〵 ");
+            System.out.println(" Please make selection:                   じしˍ,)ノ ");
+            System.out.println("── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
 
 // get user input
             String choice = scanner.nextLine();
