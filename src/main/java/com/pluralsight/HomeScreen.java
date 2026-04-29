@@ -7,9 +7,12 @@ import java.util.Scanner;
 
 public class HomeScreen {
     public static void main(String[] args) throws IOException {
+       displayHomeScreen();
+    }
 
-//tasks:
+
 //• Home Screen
+    public static void displayHomeScreen() throws IOException {
 // Add Scanner
         Scanner scanner = new Scanner(System.in);
 
@@ -52,7 +55,7 @@ public class HomeScreen {
                     break;
 
                 case "L":
-                    System.out.println("Ledger selected");
+                  ledgerScreen.ledgerHome();
                     break;
 
                 case "X":

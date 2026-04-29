@@ -57,7 +57,7 @@ public class LedgerManager {
 
         //  if no
         else {
-            System.out.println("Transaction cancelled. Returning to menu.");
+            System.out.println("Transaction cancelled.");
         }
         // after confirmed OR canceled
         System.out.println("\nPress Enter to return to home...");
@@ -72,11 +72,12 @@ public class LedgerManager {
 
         //use local date and time here and make them into strings
         // date
-        String date = LocalDate.now().toString();
+        System.out.println("Enter date [yyyy-mm-dd] :");
+        String date = scanner.nextLine();
 
         // time
-        //use withNano for accurate time
-        String time = LocalTime.now().withNano(0).toString();
+        System.out.println("Enter time [hh:mm:ss] :");
+        String time = scanner.nextLine();
 
         // ask description
         System.out.println("Enter description:");
