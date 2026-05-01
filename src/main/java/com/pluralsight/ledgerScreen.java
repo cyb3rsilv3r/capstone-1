@@ -12,7 +12,7 @@ public class ledgerScreen {
 
     //create ledger menu
     public static void ledgerHome() {
-
+//create boolean to use as a way to call program back to main menu without an infinite loop
         boolean inLedger = true;
 
         while (inLedger) {
@@ -238,7 +238,7 @@ public class ledgerScreen {
             }
         }//end of for
 
-        System.out.println("press enter to return ");
+        System.out.println("press enter to return! ꘩ ₊ ˊ˗  ");
         scanner.nextLine();
 
     }//end of month to date
@@ -262,7 +262,7 @@ public class ledgerScreen {
             }//END OF IF
         }//END OF FOR
 
-        System.out.println("press enter to return ");
+        System.out.println("press enter to return ! ꘩ ₊ ˊ˗ ");
         scanner.nextLine();
 
     } //END OF PREVIOUS MONTH
@@ -283,7 +283,7 @@ public class ledgerScreen {
             }//end of if
         }//END OF FOR
 
-        System.out.println("press enter to return ");
+        System.out.println("press enter to return ! ꘩ ₊ ˊ˗ ");
         scanner.nextLine();
 
     }//end of year to date
@@ -306,7 +306,7 @@ public class ledgerScreen {
             }//end of if
         }//end of for
 
-        System.out.println("press enter to return ");
+        System.out.println("press enter to return ! ꘩ ₊ ˊ˗ ");
         scanner.nextLine();
 
     }//end of previous year
@@ -331,7 +331,7 @@ public class ledgerScreen {
             }//end of if
         }//end of for
 
-        System.out.println("press enter to return ");
+        System.out.println("press enter to return! ꘩ ₊ ˊ˗  ");
         scanner.nextLine();
 
     }//end of search by vendor

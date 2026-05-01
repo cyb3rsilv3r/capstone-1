@@ -56,8 +56,12 @@ public class LedgerManager {
         scanner.nextLine();
 
         // 2. show confirmation message
-        System.out.println("\nNew transaction:");
+        System.out.println("     /)  /)");
+        System.out.println("    (｡•ㅅ•｡)〝₎₎ New Payment! ꘩ ₊ ˊ˗ ");
+        System.out.println(".   .╭∪─∪─────────────────────────────────────────────────────── \uD80C\uDEDC ⁺.");
         System.out.println(date + "|" + time + "|" + description + "|" + vendor + "|" + amount);
+        System.out.println("     ╰──────────────────────────────────────────────────────────   \uD804\uDC65౿ ⁺.");
+
 
         // ask if correct
         System.out.println("does this look correct? Y/N");
@@ -120,9 +124,11 @@ public class LedgerManager {
         scanner.nextLine();
 
         // 2. show confirmation message
-        System.out.println("\nNew Payment:");
+        System.out.println("     /)  /)");
+        System.out.println("    (｡•ㅅ•｡)〝₎₎ New Payment! ꘩ ₊ ˊ˗ ");
+        System.out.println(".   .╭∪─∪─────────────────────────────────────────────────────── \uD80C\uDEDC ⁺.");
         System.out.println( date + "|" + time + "|" + description + "|" + vendor + "|" + amount);
-
+        System.out.println("     ╰───────────────────────────────────────────────────────────  \uD804\uDC65౿ ⁺.");
         // ask if correct
         System.out.println("does this look correct? Y/N");
         String confirm = scanner.nextLine();
@@ -134,8 +140,12 @@ public class LedgerManager {
             Transaction t = new Transaction(date, time, description, vendor, amount);
 
             // print confirmation
-            System.out.println("Payment confirmed.ᐟ⊹₊ ⋆");
-            System.out.println("about to write...");
+            System.out.println("    ∧＿∧");
+            System.out.println("   (｡･ω･｡)つ━☆・*。");
+            System.out.println("  ⊂/　  /　   ・゜");
+            System.out.println(" 　しーＪ　　　     °。+ * 。");
+            System.out.println("                            .・゜");
+            System.out.println("                 Payment confirmed.ᐟ⊹₊ ⋆");
             writeTransaction(t);
             System.out.println("done writing");
         }//end of if

@@ -52,13 +52,11 @@ public class HomeScreen {
 
                 case "D":
                     LedgerManager.addDeposit(scanner);
-                 //   System.out.println("Add Deposit selected");
-                    //insert deposit screen art here
+
                     break;
 
                 case "P":
                     LedgerManager.makePayment(scanner);
-//                    System.out.println("Make Payment selected");
 
                     break;
 
@@ -86,6 +84,7 @@ public class HomeScreen {
 
         }
 //remember to close scanner at the end
+        //only close this scanner!!
         //scanner.close();
 
     }//end of main
