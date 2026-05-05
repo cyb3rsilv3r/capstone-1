@@ -223,7 +223,6 @@ public class ledgerScreen {
 
     // 1) Month To Date(month and today)
     public static void monthToDate() {
-
         ArrayList<String> transactions = loadTransactions();
 
         for (int i = transactions.size() - 1; i >= 0; i--) {
